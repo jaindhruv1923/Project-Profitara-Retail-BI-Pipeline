@@ -77,8 +77,8 @@ cross-sold together? What does next quarter look like?*
 
 <table>
 <tr>
-<td width="50%"><img src="screenshots/01_overview_cards.png" width="100%"/></td>
-<td width="50%"><img src="screenshots/02_health_scorecard.png" width="100%"/></td>
+<td width="50%"><img src="01_overview_cards.png" width="100%"/></td>
+<td width="50%"><img src="02_health_scorecard.png" width="100%"/></td>
 </tr>
 <tr>
 <td align="center"><i>Problem framing + at-a-glance module cards</i></td>
@@ -86,7 +86,7 @@ cross-sold together? What does next quarter look like?*
 </tr>
 </table>
 
-<p align="center"><img src="screenshots/03_executive_narrative.png" width="85%"/></p>
+<p align="center"><img src="03_executive_narrative.png" width="85%"/></p>
 <p align="center"><i>Auto-generated executive narrative — plain-English read of the numbers above, no manual write-up needed</i></p>
 
 <br/>
@@ -95,8 +95,8 @@ cross-sold together? What does next quarter look like?*
 
 <table>
 <tr>
-<td width="50%"><img src="screenshots/04_churn_distribution.png" width="100%"/></td>
-<td width="50%"><img src="screenshots/06_rfm_scatter.png" width="100%"/></td>
+<td width="50%"><img src="04_churn_distribution.png" width="100%"/></td>
+<td width="50%"><img src="06_rfm_scatter.png" width="100%"/></td>
 </tr>
 <tr>
 <td align="center"><i>Churn distribution — Active / Warming / At Risk / Churned</i></td>
@@ -104,14 +104,14 @@ cross-sold together? What does next quarter look like?*
 </tr>
 </table>
 
-<p align="center"><img src="screenshots/05_winback_priority.png" width="85%"/></p>
+<p align="center"><img src="05_winback_priority.png" width="85%"/></p>
 <p align="center"><i>Win-back priority list, ranked by revenue at stake</i></p>
 
 <br/>
 
 **💡 Discount Elasticity & Price Optimization**
 
-<p align="center"><img src="screenshots/07_elasticity_simulator.png" width="85%"/></p>
+<p align="center"><img src="07_elasticity_simulator.png" width="85%"/></p>
 <p align="center"><i>Interactive profit-vs-discount curve — finds the profit-maximizing discount per sub-category</i></p>
 
 <br/>
@@ -120,8 +120,8 @@ cross-sold together? What does next quarter look like?*
 
 <table>
 <tr>
-<td width="50%"><img src="screenshots/08_market_basket_scatter.png" width="100%"/></td>
-<td width="50%"><img src="screenshots/09_cross_sell_pairs.png" width="100%"/></td>
+<td width="50%"><img src="08_market_basket_scatter.png" width="100%"/></td>
+<td width="50%"><img src="09_cross_sell_pairs.png" width="100%"/></td>
 </tr>
 <tr>
 <td align="center"><i>Association rules — support vs confidence (bubble = lift)</i></td>
@@ -135,8 +135,8 @@ cross-sold together? What does next quarter look like?*
 
 <table>
 <tr>
-<td width="50%"><img src="screenshots/10_cohort_heatmap.png" width="100%"/></td>
-<td width="50%"><img src="screenshots/11_survival_curve.png" width="100%"/></td>
+<td width="50%"><img src="10_cohort_heatmap.png" width="100%"/></td>
+<td width="50%"><img src="11_survival_curve.png" width="100%"/></td>
 </tr>
 <tr>
 <td align="center"><i>Cohort retention heatmap by signup month</i></td>
@@ -150,8 +150,8 @@ cross-sold together? What does next quarter look like?*
 
 <table>
 <tr>
-<td width="50%"><img src="screenshots/12_clv_prediction.png" width="100%"/></td>
-<td width="50%"><img src="screenshots/13_feature_importance.png" width="100%"/></td>
+<td width="50%"><img src="12_clv_prediction.png" width="100%"/></td>
+<td width="50%"><img src="13_feature_importance.png" width="100%"/></td>
 </tr>
 <tr>
 <td align="center"><i>Random Forest — top 15 customers by predicted 12-month CLV</i></td>
@@ -163,13 +163,13 @@ cross-sold together? What does next quarter look like?*
 
 **🧮 SQL Analytics Lab**
 
-<p align="center"><img src="screenshots/14_sql_lab.png" width="85%"/></p>
+<p align="center"><img src="14_sql_lab.png" width="85%"/></p>
 <p align="center"><i>Preset queries, ready to run against the live dataset</i></p>
 
 <table>
 <tr>
-<td width="50%"><img src="screenshots/15_sql_query_result.png" width="100%"/></td>
-<td width="50%"><img src="screenshots/16_sql_result_chart.png" width="100%"/></td>
+<td width="50%"><img src="15_sql_query_result.png" width="100%"/></td>
+<td width="50%"><img src="16_sql_result_chart.png" width="100%"/></td>
 </tr>
 <tr>
 <td align="center"><i>Live DuckDB query — "High-Value Customers" preset</i></td>
@@ -301,7 +301,22 @@ profitara/
 ├── Profitara_ML_Pipeline.ipynb     # Model training notebook (CLV, churn, segmentation, market basket)
 ├── Profitara_Complete.sql          # PostgreSQL analytics layer
 ├── Profitara_Golden_Dashboard.html # Standalone HTML version of the dashboard
-├── screenshots/                    # Dashboard screenshots used in this README
+├── 01_overview_cards.png           # Dashboard screenshots used in this README
+├── 02_health_scorecard.png
+├── 03_executive_narrative.png
+├── 04_churn_distribution.png
+├── 05_winback_priority.png
+├── 06_rfm_scatter.png
+├── 07_elasticity_simulator.png
+├── 08_market_basket_scatter.png
+├── 09_cross_sell_pairs.png
+├── 10_cohort_heatmap.png
+├── 11_survival_curve.png
+├── 12_clv_prediction.png
+├── 13_feature_importance.png
+├── 14_sql_lab.png
+├── 15_sql_query_result.png
+├── 16_sql_result_chart.png
 ├── requirements.txt
 ├── run.sh / run.bat                # One-click launchers
 └── README.md
