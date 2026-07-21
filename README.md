@@ -19,7 +19,7 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jaindhruv1923)
 [![Email](https://img.shields.io/badge/Email-Reach_Out-C9971F?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jaindhruv1923@gmail.com)
 
-**Built by [Dhruv Jain](https://github.com/dhruvjain1824-creator)** · B.Tech CSE (AI & Data Science), BML Munjal University
+**Built by [Dhruv Jain](https://github.com/jaindhruv1923/Project-Profitara-Retail-BI-Pipeline)** · B.Tech CSE (AI & Data Science), BML Munjal University
 
 </div>
 
@@ -351,8 +351,8 @@ Open to Data Analyst / Data Scientist roles and collaborations — feel free to 
 <a href="mailto:jaindhruv1923@gmail.com">
   <img src="https://img.shields.io/badge/Email-jaindhruv1923@gmail.com-C9971F?style=for-the-badge&logo=gmail&logoColor=white" />
 </a>
-<a href="https://github.com/dhruvjain1824-creator">
-  <img src="https://img.shields.io/badge/GitHub-dhruvjain1824--creator-181717?style=for-the-badge&logo=github&logoColor=white" />
+<a href="https://github.com/jaindhruv1923/Project-Profitara-Retail-BI-Pipeline">
+  <img src="https://img.shields.io/badge/GitHub-Project_Repo-181717?style=for-the-badge&logo=github&logoColor=white" />
 </a>
 
 </div>
@@ -361,7 +361,7 @@ Open to Data Analyst / Data Scientist roles and collaborations — feel free to 
 
 <div align="center">
 
-**[Dhruv Jain](https://github.com/dhruvjain1824-creator)** · [LinkedIn](https://www.linkedin.com/in/jaindhruv1923) · [jaindhruv1923@gmail.com](mailto:jaindhruv1923@gmail.com)
+**[Dhruv Jain](https://github.com/jaindhruv1923/Project-Profitara-Retail-BI-Pipeline)** · [LinkedIn](https://www.linkedin.com/in/jaindhruv1923) · [jaindhruv1923@gmail.com](mailto:jaindhruv1923@gmail.com)
 
 ![footer](https://capsule-render.vercel.app/api?type=waving&color=0:1B3A5C,100:C9971F&height=100&section=footer)
 
