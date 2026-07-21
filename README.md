@@ -15,6 +15,10 @@
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Data_Layer-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![License](https://img.shields.io/badge/License-MIT-2F7D4F?style=for-the-badge)](LICENSE)
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://project-profitara-retail-bi-pipeline.streamlit.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jaindhruv1923)
+[![Email](https://img.shields.io/badge/Email-Reach_Out-C9971F?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jaindhruv1923@gmail.com)
+
 **Built by [Dhruv Jain](https://github.com/dhruvjain1824-creator)** · B.Tech CSE (AI & Data Science), BML Munjal University
 
 </div>
@@ -33,6 +37,7 @@
 - [Quickstart](#-quickstart)
 - [Repo structure](#-repo-structure)
 - [Roadmap](#-roadmap)
+- [Connect](#-connect)
 
 <br/>
 
@@ -327,13 +332,36 @@ profitara/
 ## 🗺️ Roadmap
 
 - [ ] Power BI integration (in progress)
-- [ ] Deployed public demo link
+- [x] Deployed public demo link
+
+<br/>
+
+## 📫 Connect
+
+<div align="center">
+
+Open to Data Analyst / Data Scientist roles and collaborations — feel free to reach out.
+
+<a href="https://project-profitara-retail-bi-pipeline.streamlit.app/">
+  <img src="https://img.shields.io/badge/🚀_Live_Dashboard-Try_it_now-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" />
+</a>
+<a href="https://www.linkedin.com/in/jaindhruv1923">
+  <img src="https://img.shields.io/badge/LinkedIn-jaindhruv1923-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+<a href="mailto:jaindhruv1923@gmail.com">
+  <img src="https://img.shields.io/badge/Email-jaindhruv1923@gmail.com-C9971F?style=for-the-badge&logo=gmail&logoColor=white" />
+</a>
+<a href="https://github.com/dhruvjain1824-creator">
+  <img src="https://img.shields.io/badge/GitHub-dhruvjain1824--creator-181717?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+
+</div>
 
 <br/>
 
 <div align="center">
 
-**[Dhruv Jain](https://github.com/dhruvjain1824-creator)** · [LinkedIn](https://www.linkedin.com/in/dhruvjain1824)
+**[Dhruv Jain](https://github.com/dhruvjain1824-creator)** · [LinkedIn](https://www.linkedin.com/in/jaindhruv1923) · [jaindhruv1923@gmail.com](mailto:jaindhruv1923@gmail.com)
 
 ![footer](https://capsule-render.vercel.app/api?type=waving&color=0:1B3A5C,100:C9971F&height=100&section=footer)
 
