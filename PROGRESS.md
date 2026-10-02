@@ -38,12 +38,22 @@
 - [x] Stated plainly in `README.md` the dual-dataset design: synthetic Indian quick-commerce for UI storytelling, real UCI dataset for ML core.
 - [x] Committed Phase 1 changes.
 
-### Phase 2: CLV Done Properly (In Progress)
-- [ ] Time-based split: features in observation window, spend in prediction window.
-- [ ] Baselines: Mean spend, Linear Regression, BG/NBD + Gamma-Gamma.
-- [ ] Tree models: Random Forest, HistGradientBoosting.
-- [ ] Bootstrap 95% confidence intervals, decile calibration, SHAP feature importance.
-- [ ] Record honest numbers.
+### Phase 2: CLV Done Properly (Completed)
+- [x] Implemented time-based split: 9-month observation window vs 90-day prediction window on real UCI retail dataset.
+- [x] Zero target leakage: Target is future 90-day spend (£914.25 mean); features strictly historical.
+- [x] Benchmarked Predict Mean (R² -0.001, MAE £1200.44), Linear Regression (R² 0.088, MAE £787.94), BG/NBD + Gamma-Gamma (R² 0.082, MAE £755.28), Random Forest (R² 0.091, MAE £815.33), Gradient Boosting (R² 0.093, MAE £811.88).
+- [x] Generated 95% bootstrap confidence intervals for R² and MAE.
+- [x] Computed 10-decile calibration (Decile 10 predicted £4,329.79 vs actual £4,095.44).
+- [x] Computed permutation feature importance showing historical monetary spend (+£183.12 MAE) and frequency (+£136.34 MAE) as top drivers.
+- [x] Exported benchmarks to `reports/clv_model_benchmarks.csv` and figures.
+- [x] Committed Phase 2 changes.
+
+### Phase 3: Churn as a Decision (In Progress)
+- [ ] Explicit non-circular churn definition (zero purchase in 90-day future window).
+- [ ] Calibrated probability models (Logistic Regression, Gradient Boosting).
+- [ ] Decision framework: Expected Value = P(churn) * CLV * margin - campaign cost.
+- [ ] Backtest policy against naive rules (contact all, contact top RFM recency).
+- [ ] Config file for assumptions (`config/business_assumptions.yaml`) and sensitivity table across response rates and costs.
 
 ---
 

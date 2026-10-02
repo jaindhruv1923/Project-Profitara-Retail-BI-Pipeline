@@ -26,3 +26,8 @@ US Superstore revenue in SQL,9994 orders / $2.29M,03_SQL/Profitara_Complete.sql,
 US Superstore revenue in Excel,$2297200.86,02_Excel_Workbook/Profitara_Golden_Excel__1_.xlsx,python -c "print('Hardcoded US Superstore data from earlier project')",removed
 XGBoost R2 in Excel,"Unspecified",02_Excel_Workbook/Profitara_Golden_Excel__1_.xlsx,python -c "print('No XGBoost model exists in repository code')",removed
 PhonePe purple theme in Power BI,"#5F259F",Power_BI/README.md,python -c "print('Copied from Digital Payments Pulse project')",removed
+Real UCI Time-Split CLV Gradient Boosting R2,0.093,reports/clv_model_benchmarks.csv,python ml_pipeline/clv_engine.py,verified
+Real UCI Time-Split CLV Random Forest R2,0.091,reports/clv_model_benchmarks.csv,python ml_pipeline/clv_engine.py,verified
+Real UCI Time-Split CLV BG/NBD MAE,£755.28,reports/clv_model_benchmarks.csv,python ml_pipeline/clv_engine.py,verified
+Real UCI Time-Split CLV Gradient Boosting MAE,£811.88,reports/clv_model_benchmarks.csv,python ml_pipeline/clv_engine.py,verified
+Real UCI Time-Split CLV Predict Mean MAE,£1200.44,reports/clv_model_benchmarks.csv,python ml_pipeline/clv_engine.py,verified
