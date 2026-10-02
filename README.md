@@ -45,7 +45,7 @@
 
 Profitara is an end-to-end retail business intelligence and predictive analytics platform. It uses a **dual-dataset architecture**:
 
-1. **Dashboard & UI Storytelling (`01_Dataset/Profitara_India_Dataset.csv`)**: A 10,000-row **machine-generated synthetic dataset** modeling an Indian quick-commerce / grocery retail business (4,918 orders, 1,448 customers, ₹66.95L revenue, 4.15% margin). This powers the 13-page interactive Streamlit dashboard and regional quick-commerce metrics.
+1. **Dashboard & UI Storytelling (`data/raw/Profitara_India_Dataset.csv`)**: A 10,000-row **machine-generated synthetic dataset** modeling an Indian quick-commerce / grocery retail business (4,918 orders, 1,448 customers, ₹66.95L revenue, 4.15% margin). This powers the 13-page interactive Streamlit dashboard and regional quick-commerce metrics.
 2. **Machine Learning Core (`data/real/online_retail_II.csv`)**: A **real public transaction dataset** from the UCI Machine Learning Repository (541,909 transactions across 4,372 customers). The ML models (time-split CLV, churn decision policy, and forecasting) are trained and benchmarked strictly on this real dataset to prevent synthetic generator artifacts and target leakage.
 
 The platform answers practical retail operations questions: *Which customers will churn next quarter, and what is the expected value of contacting them under a marketing budget? What is future customer spend when evaluated out-of-time? Which items are genuinely bought together?*
@@ -78,8 +78,8 @@ The platform answers practical retail operations questions: *Which customers wil
 
 <table>
 <tr>
-<td width="50%"><img src="01_overview_cards.png" width="100%"/></td>
-<td width="50%"><img src="02_health_scorecard.png" width="100%"/></td>
+<td width="50%"><img src="assets/screenshots/01_overview_cards.png" width="100%"/></td>
+<td width="50%"><img src="assets/screenshots/02_health_scorecard.png" width="100%"/></td>
 </tr>
 <tr>
 <td align="center"><i>Problem framing + at-a-glance module cards</i></td>
@@ -87,7 +87,7 @@ The platform answers practical retail operations questions: *Which customers wil
 </tr>
 </table>
 
-<p align="center"><img src="03_executive_narrative.png" width="85%"/></p>
+<p align="center"><img src="assets/screenshots/03_executive_narrative.png" width="85%"/></p>
 <p align="center"><i>Auto-generated executive narrative — plain-English read of the numbers above, no manual write-up needed</i></p>
 
 <br/>
@@ -96,8 +96,8 @@ The platform answers practical retail operations questions: *Which customers wil
 
 <table>
 <tr>
-<td width="50%"><img src="04_churn_distribution.png" width="100%"/></td>
-<td width="50%"><img src="06_rfm_scatter.png" width="100%"/></td>
+<td width="50%"><img src="assets/screenshots/04_churn_distribution.png" width="100%"/></td>
+<td width="50%"><img src="assets/screenshots/06_rfm_scatter.png" width="100%"/></td>
 </tr>
 <tr>
 <td align="center"><i>Churn distribution — Active / Warming / At Risk / Churned</i></td>
@@ -105,14 +105,14 @@ The platform answers practical retail operations questions: *Which customers wil
 </tr>
 </table>
 
-<p align="center"><img src="05_winback_priority.png" width="85%"/></p>
+<p align="center"><img src="assets/screenshots/05_winback_priority.png" width="85%"/></p>
 <p align="center"><i>Win-back priority list, ranked by revenue at stake</i></p>
 
 <br/>
 
 **💡 Discount Elasticity & Price Optimization**
 
-<p align="center"><img src="07_elasticity_simulator.png" width="85%"/></p>
+<p align="center"><img src="assets/screenshots/07_elasticity_simulator.png" width="85%"/></p>
 <p align="center"><i>Interactive profit-vs-discount curve — finds the profit-maximizing discount per sub-category</i></p>
 
 <br/>
@@ -121,8 +121,8 @@ The platform answers practical retail operations questions: *Which customers wil
 
 <table>
 <tr>
-<td width="50%"><img src="08_market_basket_scatter.png" width="100%"/></td>
-<td width="50%"><img src="09_cross_sell_pairs.png" width="100%"/></td>
+<td width="50%"><img src="assets/screenshots/08_market_basket_scatter.png" width="100%"/></td>
+<td width="50%"><img src="assets/screenshots/09_cross_sell_pairs.png" width="100%"/></td>
 </tr>
 <tr>
 <td align="center"><i>Association rules — support vs confidence (bubble = lift)</i></td>
@@ -136,8 +136,8 @@ The platform answers practical retail operations questions: *Which customers wil
 
 <table>
 <tr>
-<td width="50%"><img src="10_cohort_heatmap.png" width="100%"/></td>
-<td width="50%"><img src="11_survival_curve.png" width="100%"/></td>
+<td width="50%"><img src="assets/screenshots/10_cohort_heatmap.png" width="100%"/></td>
+<td width="50%"><img src="assets/screenshots/11_survival_curve.png" width="100%"/></td>
 </tr>
 <tr>
 <td align="center"><i>Cohort retention heatmap by signup month</i></td>
@@ -151,8 +151,8 @@ The platform answers practical retail operations questions: *Which customers wil
 
 <table>
 <tr>
-<td width="50%"><img src="12_clv_prediction.png" width="100%"/></td>
-<td width="50%"><img src="13_feature_importance.png" width="100%"/></td>
+<td width="50%"><img src="assets/screenshots/12_clv_prediction.png" width="100%"/></td>
+<td width="50%"><img src="assets/screenshots/13_feature_importance.png" width="100%"/></td>
 </tr>
 <tr>
 <td align="center"><i>Random Forest — top 15 customers by predicted 12-month CLV</i></td>
@@ -164,13 +164,13 @@ The platform answers practical retail operations questions: *Which customers wil
 
 **🧮 SQL Analytics Lab**
 
-<p align="center"><img src="14_sql_lab.png" width="85%"/></p>
+<p align="center"><img src="assets/screenshots/14_sql_lab.png" width="85%"/></p>
 <p align="center"><i>Preset queries, ready to run against the live dataset</i></p>
 
 <table>
 <tr>
-<td width="50%"><img src="15_sql_query_result.png" width="100%"/></td>
-<td width="50%"><img src="16_sql_result_chart.png" width="100%"/></td>
+<td width="50%"><img src="assets/screenshots/15_sql_query_result.png" width="100%"/></td>
+<td width="50%"><img src="assets/screenshots/16_sql_result_chart.png" width="100%"/></td>
 </tr>
 <tr>
 <td align="center"><i>Live DuckDB query — "High-Value Customers" preset</i></td>
@@ -283,44 +283,75 @@ chmod +x run.sh
 **⚙️ Manual**
 ```bash
 pip install -r requirements.txt
-streamlit run app.py
+streamlit run dashboard/app.py
 ```
 
 </td></tr>
 </table>
 
-Then open **`http://localhost:8501`** — verified end-to-end against the bundled dataset before this README was written.
+Then open **`http://localhost:8501`** to interact with the 13 live modules.
+
+To execute the complete end-to-end pipeline (data download, CLV modeling, churn decision backtest, segmentation, forecasting, DuckDB init, Power BI CSV export, and pytest verification) in a single run:
+```bash
+python run_all.py
+```
 
 <br/>
 
-## 📁 Repo structure
+## 📁 Repository Structure
 
 ```
 profitara/
-├── app.py                          # Main Streamlit dashboard — all 13 pages
-├── Profitara_India_Dataset.csv     # Dataset (10,000 rows)
-├── Profitara_ML_Pipeline.ipynb     # Model training notebook (CLV, churn, segmentation, market basket)
-├── Profitara_Complete.sql          # PostgreSQL analytics layer
-├── Profitara_Golden_Dashboard.html # Standalone HTML version of the dashboard
-├── 01_overview_cards.png           # Dashboard screenshots used in this README
-├── 02_health_scorecard.png
-├── 03_executive_narrative.png
-├── 04_churn_distribution.png
-├── 05_winback_priority.png
-├── 06_rfm_scatter.png
-├── 07_elasticity_simulator.png
-├── 08_market_basket_scatter.png
-├── 09_cross_sell_pairs.png
-├── 10_cohort_heatmap.png
-├── 11_survival_curve.png
-├── 12_clv_prediction.png
-├── 13_feature_importance.png
-├── 14_sql_lab.png
-├── 15_sql_query_result.png
-├── 16_sql_result_chart.png
-├── requirements.txt
-├── run.sh / run.bat                # One-click launchers
-└── README.md
+├── .github/workflows/ci.yml        # Automated GitHub Actions test pipeline
+├── .streamlit/config.toml          # Universal high-contrast theme configuration
+├── agent/                          # Retail Analyst Agent (schema-aware Text-to-SQL)
+│   ├── analyst_agent.py            # DuckDB SQL generator with AST & regex guardrails
+│   ├── evaluate_agent.py           # Benchmark evaluator on human-reviewed QA pairs
+│   └── fixtures.json               # Offline evaluation fixtures
+├── assets/screenshots/             # 16 visual dashboard preview screenshots
+├── config/                         # Unit economic assumptions (YAML)
+├── dashboard/                      # Interactive 13-page Streamlit application
+│   └── app.py                      # Multi-page analytics app with live DuckDB lab
+├── data/
+│   ├── raw/                        # Synthetic Indian quick-commerce dataset (10,000 rows)
+│   ├── real/                       # Real UCI Online Retail II dataset (541,909 rows, gitignored)
+│   └── profitara.duckdb            # Embedded OLAP DuckDB database (gitignored)
+├── docs/                           # Comprehensive technical and interview documentation
+│   ├── AUDIT.md                    # Initial forensic audit & leakage discovery
+│   ├── FINAL_REPORT.md             # Before/after metric comparison & verification ledger
+│   ├── INTERVIEW_QA.md             # 25 grounded interview defense questions & answers
+│   ├── PROGRESS.md                 # Step-by-step audit & implementation log
+│   ├── RECRUITER_ONE_PAGER.md      # 60-second executive summary for hiring managers
+│   ├── RESUME_BULLETS.md           # Defensible DA and ML resume bullets with citations
+│   ├── UPGRADE_PLAN.md             # Technical upgrade architecture blueprint
+│   └── WALKTHROUGH.md              # Engineering walkthrough explaining what, why & failure modes
+├── legacy/                         # Archived pre-audit exploratory assets
+│   ├── ba_docs/                    # Legacy business analysis documentation
+│   ├── excel/                      # Legacy Excel financial workbook
+│   ├── html_dashboard/             # Legacy standalone HTML dashboard
+│   ├── notebooks/                  # Original ML exploratory notebook (audited)
+│   └── sql_superstore/             # Legacy US Superstore SQL file
+├── ml_pipeline/                    # Audited machine learning models (zero leakage)
+│   ├── clv_engine.py               # Time-split CLV engine with bootstrap CIs
+│   ├── churn_decision_engine.py    # Calibrated churn model & expected-value policy backtest
+│   ├── forecasting_engine.py       # 3-fold rolling-origin time-series forecasting backtest
+│   ├── models.py                   # Vectorized NumPy/SciPy statistical model implementations
+│   └── segmentation_basket.py      # K-Means clustering (k=4) & Apriori association rules
+├── power_bi/                       # Power BI business intelligence package
+│   ├── clean_csv_export/           # 6 production-grade clean dimension/fact CSVs
+│   ├── icons/                      # UI icons used in Power BI report
+│   ├── Profitara_BIDashBoard.pbix  # Interactive Power BI report binary
+│   ├── POWERBI_REFRESH_STEPS.md    # Manual refresh instructions without binary editing
+│   └── README.md                   # Power BI schema & DAX documentation
+├── reports/                        # Model benchmark outputs, CSV ledgers & figure plots
+├── scripts/                        # Automation & data ingestion scripts
+├── sql/                            # DuckDB analytics engineering & 11 analytic queries
+├── tests/                          # Automated pytest suite (10/10 tests passing)
+├── CLAIMS_LEDGER.csv               # 47 audited claims with reproduction commands
+├── QA_PAIRS_TO_REVIEW.csv          # 40 agent evaluation pairs awaiting human review
+├── requirements.txt                # Pinned laptop-runnable dependencies
+├── run.bat / run.sh                # One-click dashboard launchers
+└── run_all.py                      # Master pipeline execution script
 ```
 
 <br/>

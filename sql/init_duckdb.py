@@ -4,7 +4,9 @@ import duckdb
 import pandas as pd
 
 DB_PATH = os.path.join("data", "profitara.duckdb")
-INDIA_CSV = os.path.join("01_Dataset", "Profitara_India_Dataset.csv")
+INDIA_CSV = os.path.join("data", "raw", "Profitara_India_Dataset.csv")
+if not os.path.exists(INDIA_CSV):
+    INDIA_CSV = os.path.join("01_Dataset", "Profitara_India_Dataset.csv")
 REAL_CSV = os.path.join("data", "real", "online_retail_II.csv")
 SEG_CSV = os.path.join("reports", "rfm_segmented_customers.csv")
 CLV_CSV = os.path.join("reports", "clv_test_predictions.csv")

@@ -3,7 +3,7 @@ import duckdb
 import pandas as pd
 
 DB_PATH = os.path.join("data", "profitara.duckdb")
-EXPORT_DIR = os.path.join("Power_BI_Work", "clean_csv_export")
+EXPORT_DIR = os.path.join("Power_BI", "clean_csv_export")
 os.makedirs(EXPORT_DIR, exist_ok=True)
 
 def export_powerbi_tables():

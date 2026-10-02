@@ -4,16 +4,18 @@ __pycache__/
 *$py.class
 
 # Data folders
-data/
 data/real/
 data/processed/
+data/*.duckdb
+data/*.duckdb.wal
 *.zip
-*.xlsx
 *.parquet
 
-# DuckDB databases
-*.duckdb
-*.duckdb.wal
+# Allow data/raw to be tracked
+!data/raw/
+
+# Allow legacy excel
+!legacy/excel/*.xlsx
 
 # Scratch and temp files
 scratch/

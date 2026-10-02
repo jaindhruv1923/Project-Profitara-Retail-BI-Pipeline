@@ -9,7 +9,9 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, PROJECT_ROOT)
 
 DB_PATH = os.path.join(PROJECT_ROOT, "data", "profitara.duckdb")
-INDIA_CSV = os.path.join(PROJECT_ROOT, "01_Dataset", "Profitara_India_Dataset.csv")
+INDIA_CSV = os.path.join(PROJECT_ROOT, "data", "raw", "Profitara_India_Dataset.csv")
+if not os.path.exists(INDIA_CSV):
+    INDIA_CSV = os.path.join(PROJECT_ROOT, "01_Dataset", "Profitara_India_Dataset.csv")
 
 def test_sql_vs_pandas_reconciliation():
     """Verify exact financial and volume reconciliation between pandas CSV and DuckDB table."""

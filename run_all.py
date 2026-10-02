@@ -60,7 +60,7 @@ def main():
     ALL PIPELINE MODULES COMPLETED SUCCESSFULLY!
     
     To view the 13-page interactive Streamlit dashboard:
-      streamlit run 05_Streamlit_Dashboard/app.py
+      streamlit run dashboard/app.py
     
     To evaluate the Retail Analyst Agent:
       1. Open QA_PAIRS_TO_REVIEW.csv

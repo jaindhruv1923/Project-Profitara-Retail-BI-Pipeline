@@ -15,7 +15,9 @@ PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-INDIA_CSV = os.path.join(PROJECT_ROOT, "01_Dataset", "Profitara_India_Dataset.csv")
+INDIA_CSV = os.path.join(PROJECT_ROOT, "data", "raw", "Profitara_India_Dataset.csv")
+if not os.path.exists(INDIA_CSV):
+    INDIA_CSV = os.path.join(PROJECT_ROOT, "01_Dataset", "Profitara_India_Dataset.csv")
 DUCKDB_PATH = os.path.join(PROJECT_ROOT, "data", "profitara.duckdb")
 REPORTS_DIR = os.path.join(PROJECT_ROOT, "reports")
 FIGURES_DIR = os.path.join(REPORTS_DIR, "figures")

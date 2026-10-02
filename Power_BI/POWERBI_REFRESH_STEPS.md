@@ -10,7 +10,7 @@ This guide walks you step-by-step through refreshing the Power BI report (`Profi
 
 The cleaned, reconciled CSV files are located in:
 ```
-Power_BI_Work/clean_csv_export/
+Power_BI/clean_csv_export/
 ├── fact_india_orders.csv          # 10,000 retail orders (Sales, Profit, Margin, SLA)
 ├── dim_customer_segments.csv      # 4,334 segmented customers (k=4 K-Means)
 ├── dim_clv_predictions.csv        # 996 test customers with out-of-time CLV predictions
@@ -35,7 +35,7 @@ Power_BI_Work/clean_csv_export/
 1. Select a query (e.g. `Orders` or `Fact_Orders`).
 2. In the right panel (*Applied Steps*), click the **Gear Icon** ⚙️ next to the **Source** step.
 3. Browse to the absolute path of:
-   `Power_BI_Work\clean_csv_export\fact_india_orders.csv`
+   `Power_BI\clean_csv_export\fact_india_orders.csv`
 4. Click **OK**.
 5. Repeat for any customer or segmentation tables, pointing them to `dim_customer_segments.csv`.
 
