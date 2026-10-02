@@ -36,3 +36,8 @@ Real UCI Out-of-Time Churn Logistic Regression Brier Score,0.1928,reports/churn_
 Expected Value Winback Policy Simulated Net Return,£720.03,reports/churn_policy_backtest.csv,python ml_pipeline/churn_decision_engine.py,verified
 Naive Recency Winback Policy Simulated Net Return,£31.60,reports/churn_policy_backtest.csv,python ml_pipeline/churn_decision_engine.py,verified
 Random Winback Policy Simulated Net Return,-£19.19,reports/churn_policy_backtest.csv,python ml_pipeline/churn_decision_engine.py,verified
+Real UCI K-Means Selected Clusters k,4,reports/kmeans_k_evaluation.csv,python ml_pipeline/segmentation_basket.py,verified
+Real UCI K-Means k=4 Seed Stability,0.947,reports/kmeans_k_evaluation.csv,python ml_pipeline/segmentation_basket.py,verified
+Real UCI K-Means Champions Revenue Share,64.2%,reports/customer_segment_profiles.csv,python ml_pipeline/segmentation_basket.py,verified
+Real UCI Apriori Surviving Association Rules (min_sup 0.015),248,reports/apriori_surviving_rules.csv,python ml_pipeline/segmentation_basket.py,verified
+Real UCI Apriori Top Rule Lift,27.865,reports/apriori_surviving_rules.csv,python ml_pipeline/segmentation_basket.py,verified

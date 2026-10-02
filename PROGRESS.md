@@ -57,10 +57,21 @@
 - [x] Generated sensitivity analysis matrix across cost (£2.50 to £10.00) and response rates (5% to 25%).
 - [x] Committed Phase 3 changes.
 
-### Phase 4: Segmentation & Basket Analysis (In Progress)
-- [ ] Justify k for K-Means (elbow, silhouette, seed stability across seeds 42, 100, 2024, 7, 999).
-- [ ] Profile business segments and map to operational actions.
-- [ ] Run Apriori support, confidence, and lift thresholds on real retail baskets and report surviving rules.
+### Phase 4: Segmentation & Basket Analysis (Completed)
+- [x] Evaluated K-Means across k in 2..7 using inertia, silhouette score, and stability across 5 seeds (42, 100, 2024, 7, 999).
+- [x] Justified k=4 for operational business segmentation (seed stability 0.947, silhouette 0.330).
+- [x] Profiled 4 actionable customer segments: Champions & VIPs (702 customers, 64.2% revenue share), Loyal & Steady Buyers (1,182 customers, 24.5% revenue), At-Risk Spenders (875 customers, 4.9% revenue), Hibernating Inactive (1,575 customers, 6.5% revenue).
+- [x] Mapped each segment to actionable CRM retention/loyalty strategies in `reports/customer_segment_profiles.csv`.
+- [x] Executed Apriori market basket analysis on real retail transactions (17,512 baskets). Discovered 493 itemsets and 248 association rules at min_support=0.015 and min_lift=1.2.
+- [x] Top cross-sell rule: Wooden Star Christmas ===> Wooden Heart Christmas (Lift 27.865, Confidence 73.7%).
+- [x] Exported surviving rules to `reports/apriori_surviving_rules.csv` and charts.
+- [x] Committed Phase 4 changes.
+
+### Phase 5: Forecasting (In Progress)
+- [ ] Aggregate real retail time series to weekly/monthly frequency.
+- [ ] Implement rolling-origin backtest (walk-forward CV across 3 folds).
+- [ ] Benchmark: Seasonal Naive baseline, Holt-Winters exponential smoothing, Autoregressive ML model (Random Forest / Ridge with lag features).
+- [ ] Report honest performance across folds (RMSE & MAPE), explicitly identifying where naive wins or loses.
 
 ---
 
