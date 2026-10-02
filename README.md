@@ -43,16 +43,12 @@
 
 ## 🎯 What this is
 
-> Profitara takes a raw **10,000-row retail transaction dataset** — 4,918 orders,
-> 1,448 customers, 9 categories / 17 sub-categories, ₹66.95L in revenue — and turns it
-> into a full business intelligence platform. Not one chart: a **13-page Streamlit
-> dashboard**, **12 trained ML models**, and a live SQL analytics layer, all launched
-> with a single command.
+Profitara is an end-to-end retail business intelligence and predictive analytics platform. It uses a **dual-dataset architecture**:
 
-Most portfolio dashboards stop at "here's revenue by month." Profitara was built to
-answer what a retail business actually asks: *which customers are about to churn, and
-what are they worth? Where is the discount strategy bleeding margin? What should be
-cross-sold together? What does next quarter look like?*
+1. **Dashboard & UI Storytelling (`01_Dataset/Profitara_India_Dataset.csv`)**: A 10,000-row **machine-generated synthetic dataset** modeling an Indian quick-commerce / grocery retail business (4,918 orders, 1,448 customers, ₹66.95L revenue, 4.15% margin). This powers the 13-page interactive Streamlit dashboard and regional quick-commerce metrics.
+2. **Machine Learning Core (`data/real/online_retail_II.csv`)**: A **real public transaction dataset** from the UCI Machine Learning Repository (541,909 transactions across 4,372 customers). The ML models (time-split CLV, churn decision policy, and forecasting) are trained and benchmarked strictly on this real dataset to prevent synthetic generator artifacts and target leakage.
+
+The platform answers practical retail operations questions: *Which customers will churn next quarter, and what is the expected value of contacting them under a marketing budget? What is future customer spend when evaluated out-of-time? Which items are genuinely bought together?*
 
 <br/>
 

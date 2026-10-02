@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data folders
+data/
+data/real/
+data/processed/
+*.zip
+*.xlsx
+*.parquet
+
+# DuckDB databases
+*.duckdb
+*.duckdb.wal
+
+# Scratch and temp files
+scratch/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -25,11 +25,25 @@
 - [x] Evaluated resume claims against verified outputs.
 - [x] Wrote `AUDIT.md` and `UPGRADE_PLAN.md`.
 
-### Phase 0: Truth Cleanup (In Progress)
-- [ ] Initialize `CLAIMS_LEDGER.csv`.
-- [ ] Generate `GITHUB_PROFILE_README_FIXES.md`.
-- [ ] Fix conflicting claims in existing documentation.
-- [ ] Commit Phase 0 changes.
+### Phase 0: Truth Cleanup (Completed)
+- [x] Initialized `CLAIMS_LEDGER.csv`.
+- [x] Generated `GITHUB_PROFILE_README_FIXES.md`.
+- [x] Fixed conflicting claims in existing documentation and Power BI README.
+- [x] Committed Phase 0 changes (`e096638`).
+
+### Phase 1: Data Honesty (Completed)
+- [x] Created `scripts/download_real_data.py`.
+- [x] Configured `.gitignore` for real data directory and databases.
+- [x] Successfully downloaded real UCI Online Retail dataset (541,909 rows, 4,372 customers) into `data/real/online_retail_II.csv`.
+- [x] Stated plainly in `README.md` the dual-dataset design: synthetic Indian quick-commerce for UI storytelling, real UCI dataset for ML core.
+- [x] Committed Phase 1 changes.
+
+### Phase 2: CLV Done Properly (In Progress)
+- [ ] Time-based split: features in observation window, spend in prediction window.
+- [ ] Baselines: Mean spend, Linear Regression, BG/NBD + Gamma-Gamma.
+- [ ] Tree models: Random Forest, HistGradientBoosting.
+- [ ] Bootstrap 95% confidence intervals, decile calibration, SHAP feature importance.
+- [ ] Record honest numbers.
 
 ---
 
