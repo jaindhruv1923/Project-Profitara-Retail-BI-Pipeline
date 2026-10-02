@@ -1,33 +1,31 @@
-# Icon Set — Digital Payments Pulse
+# Profitara — Power BI Visual Assets & Icons
 
-Custom-built SVG icons in your dashboard theme (`#5F259F` purple family). No licensing/attribution needed — these are original, made specifically for this project, safe for GitHub/LinkedIn/resume use.
+Custom icons and visual assets designed for the Profitara Retail Intelligence Power BI Dashboard.
 
-## Files & where to use them
+## Files & Recommended Usage
 
-| File | Use it for |
+| File | Recommended Visual / KPI |
 |---|---|
-| `transactions-arrow.png` | Total Transactions KPI card |
-| `rupee-value.png` | Total Value KPI card |
-| `users-group.png` | Unique Users KPI card |
-| `success-check.png` | Success Rate KPI card / Status donut legend |
-| `pending-clock.png` | Pending status legend/marker |
-| `failed-cross.png` | Failed status legend/marker |
-| `growth-arrow.png` | MoM/YoY growth indicators, insights panel |
-| `calendar-weekday.png` | Weekday vs Weekend page/visual header |
-| `donut-chart.png` | Page navigation icon for any breakdown page |
-| `insights-bulb.png` | Insights panel header (white version — sits on purple bg) |
-| `shield-secure.png` | "Secure. Simple. Seamless." tagline area, security page |
-| `coin-stack.png` | Revenue/value-related callouts |
-| `wallet.png` | Hero section / cover page |
-| `qr-code.png` | Hero section / cover page |
-| `geo-pin.png` | Geographic Analysis page header |
+| `transactions-arrow.png` | Total Transactions / Orders KPI card |
+| `rupee-value.png` | Total Revenue (₹) KPI card |
+| `users-group.png` | Unique Customers KPI card |
+| `success-check.png` | Delivery Success Rate KPI card |
+| `pending-clock.png` | Pending / Scheduled Orders indicator |
+| `failed-cross.png` | Cancelled / Returned Orders indicator |
+| `growth-arrow.png` | MoM / YoY Growth KPI indicator |
+| `calendar-weekday.png` | Date / Time-series drilldowns |
+| `donut-chart.png` | Segment / Category breakdown visuals |
+| `insights-bulb.png` | Executive Narrative & Insights panel |
+| `shield-secure.png` | Operational Integrity / Anomaly panel |
+| `coin-stack.png` | Net Margin / Profit callouts |
+| `wallet.png` | Executive Overview cover / header |
+| `qr-code.png` | Quick Commerce / Instant Order indicator |
+| `geo-pin.png` | Geographic Analysis header |
 
-## How to insert into Power BI
+## Power BI Integration Steps
 
-1. Insert tab → **Image** → browse to the SVG file
-2. Resize and place — for KPI cards, put the icon in a small circle in the top-left corner of the card, number/label to its right (matches the PhonePe reference layout)
-3. For consistent sizing, keep all KPI-row icons at the same width (e.g., 40×40px) so the row looks aligned
+1. In Power BI Desktop, open `Profitara_BIDashBoard.pbix`.
+2. Insert tab → **Image** → select the appropriate icon.
+3. Position alongside KPI cards (e.g. 36×36px or 40×40px).
+4. See `POWERBI_REFRESH_STEPS.md` for instructions on refreshing data sources with the cleaned datasets.
 
-## Editing colors
-
-Every file is plain SVG — open in any text editor (or VS Code) and edit the `fill="#5F259F"` / `stroke="#5F259F"` hex codes directly if you want to nudge the shade. All colors used here match `DigitalPaymentsPulse_Theme.json` exactly so nothing will clash.
