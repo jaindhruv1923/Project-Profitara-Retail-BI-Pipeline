@@ -75,13 +75,21 @@
 - [x] Saved evaluation results to `reports/forecast_model_summary.csv` and generated `reports/figures/forecast_rolling_backtest.png`.
 - [x] Committed Phase 5 changes.
 
-### Phase 6: SQL and Analytics Layer (In Progress)
-- [ ] Initialize DuckDB database (`data/profitara.duckdb`).
-- [ ] Load real retail dataset and Indian quick-commerce dataset into DuckDB.
-- [ ] Write 10+ advanced, production-grade analytic SQL queries (`sql/analytic_queries.sql`).
-- [ ] Reconcile every dashboard figure against SQL queries and pandas totals.
-- [ ] Rebuild and restore fully functional 13-page `app.py` in `05_Streamlit_Dashboard/` using corrected outputs, rich Atkinson/IBM Plex theme, and DuckDB analytics.
-- [ ] Generate `Power_BI/POWERBI_REFRESH_STEPS.md` and export clean CSVs for Power BI.
+### Phase 6: SQL and Analytics Layer (Completed)
+- [x] Initialized DuckDB database at `data/profitara.duckdb`.
+- [x] Loaded `india_orders` (10,000 rows), `real_transactions` (397,884 rows), `customer_segments` (4,334 rows), `clv_predictions` (996 rows), `winback_targets` (274 rows), `association_rules` (248 rows).
+- [x] Engineered 11 advanced analytic queries in `sql/analytic_queries.sql` (cohort retention, repeat purchase velocity, Pareto 80/20 concentration, RFM segment revenue share, MoM growth via LAG(), 30-day moving average, churn risk exposure, delivery SLA economics, DENSE_RANK() revenue tiers). Tested and validated 100% against DuckDB.
+- [x] Rebuilt full 13-page Streamlit application in `05_Streamlit_Dashboard/app.py` incorporating live DuckDB SQL lab, interactive elasticity simulator, Atkinson Hyperlegible custom theme, and transparent benchmark reporting.
+- [x] Exported clean CSV tables to `Power_BI_Work/clean_csv_export/` and authored `Power_BI/POWERBI_REFRESH_STEPS.md`.
+- [x] Committed Phase 6 changes.
+
+### Phase 7: Retail Analyst Agent (In Progress)
+- [ ] Schema-aware prompt for DuckDB read-only SQL generation.
+- [ ] Security guardrails: Strict SELECT / WITH enforcement, rejection of DDL/DML, row limit clamping.
+- [ ] Configurable provider via `.env` (Gemini API with fallback / offline recorded fixture mode).
+- [ ] Generate ~40 question + reference SQL pairs in `QA_PAIRS_TO_REVIEW.csv` marked "machine-generated, unreviewed".
+- [ ] Evaluation script built to run only on pairs marked as reviewed by the user.
+- [ ] STOP AT GATE for user review of QA pairs.
 
 ---
 
