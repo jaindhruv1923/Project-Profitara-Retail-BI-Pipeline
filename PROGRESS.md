@@ -67,11 +67,21 @@
 - [x] Exported surviving rules to `reports/apriori_surviving_rules.csv` and charts.
 - [x] Committed Phase 4 changes.
 
-### Phase 5: Forecasting (In Progress)
-- [ ] Aggregate real retail time series to weekly/monthly frequency.
-- [ ] Implement rolling-origin backtest (walk-forward CV across 3 folds).
-- [ ] Benchmark: Seasonal Naive baseline, Holt-Winters exponential smoothing, Autoregressive ML model (Random Forest / Ridge with lag features).
-- [ ] Report honest performance across folds (RMSE & MAPE), explicitly identifying where naive wins or loses.
+### Phase 5: Forecasting (Completed)
+- [x] Aggregated real retail dataset into 53 weekly revenue observations (mean £160,430/week).
+- [x] Conducted 3-fold rolling-origin walk-forward backtest over a 4-week forecast horizon.
+- [x] Benchmarked: Seasonal 4-week moving average naive (mean MAPE 17.71%), Holt-Winters double exponential smoothing (mean MAPE 32.03%), and Autoregressive Random Forest with lag features (mean MAPE 29.49%).
+- [x] Reported honest fold winners: Naive won Folds 1 & 2 during volatile transition weeks; Holt-Winters decisively won Fold 3 during the holiday peak season (MAPE 4.10%, RMSE £12,259).
+- [x] Saved evaluation results to `reports/forecast_model_summary.csv` and generated `reports/figures/forecast_rolling_backtest.png`.
+- [x] Committed Phase 5 changes.
+
+### Phase 6: SQL and Analytics Layer (In Progress)
+- [ ] Initialize DuckDB database (`data/profitara.duckdb`).
+- [ ] Load real retail dataset and Indian quick-commerce dataset into DuckDB.
+- [ ] Write 10+ advanced, production-grade analytic SQL queries (`sql/analytic_queries.sql`).
+- [ ] Reconcile every dashboard figure against SQL queries and pandas totals.
+- [ ] Rebuild and restore fully functional 13-page `app.py` in `05_Streamlit_Dashboard/` using corrected outputs, rich Atkinson/IBM Plex theme, and DuckDB analytics.
+- [ ] Generate `Power_BI/POWERBI_REFRESH_STEPS.md` and export clean CSVs for Power BI.
 
 ---
 

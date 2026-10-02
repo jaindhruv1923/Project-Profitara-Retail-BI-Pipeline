@@ -41,3 +41,7 @@ Real UCI K-Means k=4 Seed Stability,0.947,reports/kmeans_k_evaluation.csv,python
 Real UCI K-Means Champions Revenue Share,64.2%,reports/customer_segment_profiles.csv,python ml_pipeline/segmentation_basket.py,verified
 Real UCI Apriori Surviving Association Rules (min_sup 0.015),248,reports/apriori_surviving_rules.csv,python ml_pipeline/segmentation_basket.py,verified
 Real UCI Apriori Top Rule Lift,27.865,reports/apriori_surviving_rules.csv,python ml_pipeline/segmentation_basket.py,verified
+Real UCI Rolling-Origin Forecasting Naive 4W Moving Avg Mean MAPE,17.71%,reports/forecast_model_summary.csv,python ml_pipeline/forecasting_engine.py,verified
+Real UCI Rolling-Origin Forecasting Holt-Winters Mean MAPE,32.03%,reports/forecast_model_summary.csv,python ml_pipeline/forecasting_engine.py,verified
+Real UCI Rolling-Origin Forecasting Holt-Winters Fold 3 MAPE,4.10%,reports/forecast_rolling_eval.csv,python ml_pipeline/forecasting_engine.py,verified
+Real UCI Rolling-Origin Forecasting Autoregressive Random Forest Mean MAPE,29.49%,reports/forecast_model_summary.csv,python ml_pipeline/forecasting_engine.py,verified
