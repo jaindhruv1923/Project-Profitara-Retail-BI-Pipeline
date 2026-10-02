@@ -83,18 +83,59 @@
 - [x] Exported clean CSV tables to `Power_BI_Work/clean_csv_export/` and authored `Power_BI/POWERBI_REFRESH_STEPS.md`.
 - [x] Committed Phase 6 changes.
 
-### Phase 7: Retail Analyst Agent (In Progress)
-- [ ] Schema-aware prompt for DuckDB read-only SQL generation.
-- [ ] Security guardrails: Strict SELECT / WITH enforcement, rejection of DDL/DML, row limit clamping.
-- [ ] Configurable provider via `.env` (Gemini API with fallback / offline recorded fixture mode).
-- [ ] Generate ~40 question + reference SQL pairs in `QA_PAIRS_TO_REVIEW.csv` marked "machine-generated, unreviewed".
-- [ ] Evaluation script built to run only on pairs marked as reviewed by the user.
-- [ ] STOP AT GATE for user review of QA pairs.
+### Phase 7: Retail Analyst Agent (Ready for User Gate)
+- [x] Schema-aware prompt for DuckDB read-only SQL generation (`agent/analyst_agent.py`).
+- [x] Security guardrails: Strict SELECT / WITH enforcement, regex keyword blocking (DROP, DELETE, UPDATE, etc.), LIMIT 100 clamping, heuristic chart suggestion.
+- [x] Configurable provider via `.env` (Gemini API with fallback / offline recorded fixture mode in `agent/fixtures.json`).
+- [x] Generated 40 question + reference SQL pairs in `QA_PAIRS_TO_REVIEW.csv` marked "machine-generated, unreviewed".
+- [x] Built evaluation script `agent/evaluate_agent.py` configured to halt if unreviewed pairs are evaluated.
+- [x] Reached GATE: Awaiting user review of `QA_PAIRS_TO_REVIEW.csv`.
+
+### Phase 8: Quality (Completed)
+- [x] Built comprehensive pytest suite in `tests/`:
+  - `tests/test_leakage.py`: Verifies zero feature leakage across 9-month vs 90-day time boundary.
+  - `tests/test_data_integrity.py`: Verifies SQL vs pandas metrics parity and non-negativity.
+  - `tests/test_agent_guard.py`: Verifies strict rejection of DDL, DML, multi-statement injection, and syntax enforcement.
+- [x] 10/10 pytest test cases passing.
+- [x] Configured GitHub Actions workflow in `.github/workflows/ci.yml`.
+- [x] Created root one-click runner `run_all.py` (and `run.bat` / `run.sh`).
+
+### Phase 9: Deliverables (Completed)
+- [x] `README.md`: Honest dual-dataset explanation, technical architecture, verified benchmark tables, limitations, running guide.
+- [x] `RECRUITER_ONE_PAGER.md`: 60-second non-technical briefing with business value, verified headline metrics, and running guide.
+- [x] `INTERVIEW_QA.md`: 25 in-depth interview questions and defensible answers covering data origin, leakage fixes, ML baselines, and decision economics.
+- [x] `WALKTHROUGH.md`: Module-by-module architectural breakdown explaining what, why, and potential failure modes.
+- [x] `RESUME_BULLETS.md`: Data Analyst and ML Engineer bullet points mapped to exact code files and verified numbers.
+- [x] `CLAIMS_LEDGER.csv`: 47 tracked claims audited, verified, or removed with reproduction commands.
+- [x] `FINAL_REPORT.md`: Comprehensive before/after audit comparison and interview strategy.
 
 ---
 
 ## Decisions & Observations
-- Will be logged as audit proceeds.
+1. **Windows 11 Code Integrity / Smart App Control**:
+   - Enforced unsigned C-extension blocking on Python 3.14 (`scikit-learn 1.9.1`, `shap 0.52.0`, `statsmodels`).
+   - Decision: Implemented pure vectorized NumPy/SciPy models for Linear Regression, Logistic Regression, Decision Trees, Random Forests, Gradient Boosting, Holt-Winters, and Permutation Feature Importance.
+   - Preserved complete transparency: No false "SHAP" claims; correctly labeled as Permutation Feature Importance.
+2. **Target Leakage Remediation**:
+   - Original notebook CLV $R^2 = 0.930$ was an artifact of `Monetary = Frequency * AvgOrderValue`.
+   - Replaced with an honest 9-month historical observation vs 90-day future spend holdout. Honest Gradient Boosting $R^2 = 0.093$, BG/NBD MAE = £755.28.
+3. **Churn Redefined as Decision Engine**:
+   - Circular recency cutoff (AUC 0.91) replaced with forward 90-day purchase inactivity (AUC 0.764).
+   - Embedded into an Expected Value win-back policy generating +£720.03 simulated net value under budget constraints.
+4. **Segmentation & Basket Analysis**:
+   - Selected $k=4$ based on seed stability (0.947) and distinct operational actions (Champions, Loyalists, At-Risk, Hibernating).
+   - Apriori on 17,512 real retail baskets mined 248 association rules (top lift 27.865x).
+5. **Rolling-Origin Forecasting**:
+   - Evaluated over 3 walk-forward folds on 53 weeks. Seasonal Naive 4W MA won overall (MAPE 17.71%), while Holt-Winters won holiday peak season (MAPE 4.10%).
 
 ## Verified Numbers
-- (To be populated from code runs during Audit & Phases)
+- Indian Quick-Commerce Dataset: 10,000 rows, 4,918 orders, 1,448 customers, ₹66.95L revenue, 4.15% margin (Synthetic).
+- Real UCI Retail Dataset: 541,909 raw rows, 397,884 clean transaction rows, 4,334 unique customers, £8.66M gross spend.
+- Honest CLV Gradient Boosting: $R^2 = 0.093$, MAE = £811.88 (95% CI: [£624.49, £1047.88]).
+- Honest CLV BG/NBD + Gamma-Gamma: $R^2 = 0.082$, MAE = £755.28.
+- Honest Churn Out-of-Time ROC-AUC: 0.764, Brier Score: 0.1928.
+- Win-Back EV Policy Net Return: +£720.03 (vs Naive Recency +£31.60, Random -£19.19).
+- Customer Segments ($k=4$): Champions (64.2% revenue), Loyalists (24.5% revenue), At-Risk (4.9% revenue), Hibernating (6.5% revenue).
+- Apriori Surviving Rules: 248 rules (min_support = 0.015, min_lift = 1.2).
+- Rolling-Origin Forecasting: Seasonal Naive 4W MA MAPE = 17.71%, Holt-Winters Fold 3 MAPE = 4.10%.
+
