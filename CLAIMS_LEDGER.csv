@@ -31,3 +31,8 @@ Real UCI Time-Split CLV Random Forest R2,0.091,reports/clv_model_benchmarks.csv,
 Real UCI Time-Split CLV BG/NBD MAE,£755.28,reports/clv_model_benchmarks.csv,python ml_pipeline/clv_engine.py,verified
 Real UCI Time-Split CLV Gradient Boosting MAE,£811.88,reports/clv_model_benchmarks.csv,python ml_pipeline/clv_engine.py,verified
 Real UCI Time-Split CLV Predict Mean MAE,£1200.44,reports/clv_model_benchmarks.csv,python ml_pipeline/clv_engine.py,verified
+Real UCI Out-of-Time Churn Logistic Regression AUC,0.764,reports/churn_model_benchmarks.csv,python ml_pipeline/churn_decision_engine.py,verified
+Real UCI Out-of-Time Churn Logistic Regression Brier Score,0.1928,reports/churn_model_benchmarks.csv,python ml_pipeline/churn_decision_engine.py,verified
+Expected Value Winback Policy Simulated Net Return,£720.03,reports/churn_policy_backtest.csv,python ml_pipeline/churn_decision_engine.py,verified
+Naive Recency Winback Policy Simulated Net Return,£31.60,reports/churn_policy_backtest.csv,python ml_pipeline/churn_decision_engine.py,verified
+Random Winback Policy Simulated Net Return,-£19.19,reports/churn_policy_backtest.csv,python ml_pipeline/churn_decision_engine.py,verified

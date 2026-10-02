@@ -48,12 +48,19 @@
 - [x] Exported benchmarks to `reports/clv_model_benchmarks.csv` and figures.
 - [x] Committed Phase 2 changes.
 
-### Phase 3: Churn as a Decision (In Progress)
-- [ ] Explicit non-circular churn definition (zero purchase in 90-day future window).
-- [ ] Calibrated probability models (Logistic Regression, Gradient Boosting).
-- [ ] Decision framework: Expected Value = P(churn) * CLV * margin - campaign cost.
-- [ ] Backtest policy against naive rules (contact all, contact top RFM recency).
-- [ ] Config file for assumptions (`config/business_assumptions.yaml`) and sensitivity table across response rates and costs.
+### Phase 3: Churn as a Decision (Completed)
+- [x] Defined non-contractual churn strictly out-of-time: 0 purchases in future 90 days (41.2% churn base rate).
+- [x] Built and trained calibrated Logistic Regression model (ROC-AUC 0.764, 95% CI: [0.736, 0.793], Brier score 0.1928, Log-Loss 0.5611).
+- [x] Defined Expected Value decision framework: EV = P(churn) * response_rate * predicted_CLV * margin - campaign_cost.
+- [x] Saved assumptions in `config/business_assumptions.yaml` (£5 cost, 20% margin, 15% response rate, £1,500 budget).
+- [x] Backtested against naive policies: Proposed EV policy achieves +£720.03 simulated net value, outperforming Top Recency (+£31.60), Top Spender (+£261.47), and Random (-£19.19).
+- [x] Generated sensitivity analysis matrix across cost (£2.50 to £10.00) and response rates (5% to 25%).
+- [x] Committed Phase 3 changes.
+
+### Phase 4: Segmentation & Basket Analysis (In Progress)
+- [ ] Justify k for K-Means (elbow, silhouette, seed stability across seeds 42, 100, 2024, 7, 999).
+- [ ] Profile business segments and map to operational actions.
+- [ ] Run Apriori support, confidence, and lift thresholds on real retail baskets and report surviving rules.
 
 ---
 
