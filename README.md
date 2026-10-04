@@ -15,7 +15,7 @@
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Data_Layer-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![License](https://img.shields.io/badge/License-MIT-2F7D4F?style=for-the-badge)](LICENSE)
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://project-profitara-retail-bi-pipeline.streamlit.app/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://project-profitara-retail-bi-pipeline-kgg8tjm3e9umxkbhd86r3j.streamlit.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jaindhruv1923)
 [![Email](https://img.shields.io/badge/Email-Reach_Out-C9971F?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jaindhruv1923@gmail.com)
 
@@ -369,7 +369,7 @@ profitara/
 
 Open to Data Analyst / Data Scientist roles and collaborations — feel free to reach out.
 
-<a href="https://project-profitara-retail-bi-pipeline.streamlit.app/">
+<a href="https://project-profitara-retail-bi-pipeline-kgg8tjm3e9umxkbhd86r3j.streamlit.app/">
   <img src="https://img.shields.io/badge/🚀_Live_Dashboard-Try_it_now-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" />
 </a>
 <a href="https://www.linkedin.com/in/jaindhruv1923">
