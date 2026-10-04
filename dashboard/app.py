@@ -118,21 +118,51 @@ st.markdown("""
         border-radius: 8px !important;
         overflow: hidden !important;
     }
+
+    /* Normal screenshot-friendly proportions */
+    .main .block-container {
+        max-width: 1220px !important;
+        padding-top: 1.5rem !important;
+        padding-bottom: 2.5rem !important;
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+        margin: 0 auto !important;
+    }
+    
+    [data-testid="stImage"] {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 12px auto !important;
+    }
+    
+    [data-testid="stImage"] img {
+        max-width: 780px !important;
+        max-height: 460px !important;
+        object-fit: contain !important;
+        border-radius: 8px !important;
+        border: 1px solid rgba(128, 128, 128, 0.2) !important;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    .js-plotly-plot {
+        border-radius: 8px !important;
+        overflow: hidden !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
 # Helper function to style all plotly charts for dark/light theme transparency
-def style_chart(fig, title=None, height=None):
+def style_chart(fig, title=None, height=380):
     layout_update = {
         "paper_bgcolor": "rgba(0,0,0,0)",
         "plot_bgcolor": "rgba(0,0,0,0)",
         "font": dict(family="Atkinson Hyperlegible, sans-serif"),
         "margin": dict(l=24, r=24, t=44 if title else 24, b=24),
+        "height": height,
     }
     if title:
         layout_update["title"] = dict(text=title, font=dict(size=14, color=None))
-    if height:
-        layout_update["height"] = height
     fig.update_layout(**layout_update)
     fig.update_xaxes(showgrid=True, gridcolor="rgba(128, 128, 128, 0.15)")
     fig.update_yaxes(showgrid=True, gridcolor="rgba(128, 128, 128, 0.15)")
@@ -396,7 +426,11 @@ elif page == "🔗 Market Basket Analysis":
         
         fig_rules_img = os.path.join(FIGURES_DIR, "apriori_top_rules.png")
         if os.path.exists(fig_rules_img):
-            st.image(fig_rules_img, caption="Top Association Rules by Lift (Real Retail Baskets)", use_column_width=True)
+            st.image(
+                fig_rules_img,
+                caption="Top Association Rules by Lift (Real Retail Baskets)",
+                use_container_width=True
+            )
     else:
         st.warning("Run `python ml_pipeline/segmentation_basket.py` to generate rules.")
 
@@ -425,7 +459,7 @@ elif page == "⚠️ Churn Early Warning":
         
         fig_churn_img = os.path.join(FIGURES_DIR, "churn_policy_comparison.png")
         if os.path.exists(fig_churn_img):
-            st.image(fig_churn_img, caption="Simulated Policy ROI vs Naive Contact Rules", use_column_width=True)
+            st.image(fig_churn_img, caption="Simulated Policy ROI vs Naive Contact Rules", use_container_width=True)
 
 
 # =============================================================================
@@ -444,12 +478,17 @@ elif page == "📉 Cohort Retention":
     cohort_size = cohort_pivot.iloc[:, 0]
     retention = cohort_pivot.divide(cohort_size, axis=0) * 100.0
     
+    # Convert PeriodIndex and column headers to string to fix JSON serialization in Plotly
+    retention.index = retention.index.astype(str)
+    retention_disp = retention.iloc[:, :12].copy()
+    retention_disp.columns = [f"M+{c}" for c in retention_disp.columns]
+    
     fig_heat = px.imshow(
-        retention.iloc[:, :12], text_auto=".0f", color_continuous_scale="YlGnBu",
+        retention_disp, text_auto=".0f", color_continuous_scale="YlGnBu",
         labels=dict(x="Months Since First Order", y="Signup Cohort", color="Retention %"),
         title="Monthly Customer Retention % by Acquisition Cohort"
     )
-    st.plotly_chart(style_chart(fig_heat), use_container_width=True)
+    st.plotly_chart(style_chart(fig_heat, height=420), use_container_width=True)
 
 
 # =============================================================================
@@ -598,7 +637,7 @@ elif page == "🔮 Forecasts & Trends":
 
     fig_fc_img = os.path.join(FIGURES_DIR, "forecast_rolling_backtest.png")
     if os.path.exists(fig_fc_img):
-        st.image(fig_fc_img, caption="Rolling-Origin Forecast Trajectories across 3 Walk-Forward Folds", use_column_width=True)
+        st.image(fig_fc_img, caption="Rolling-Origin Forecast Trajectories across 3 Walk-Forward Folds", use_container_width=True)
 
 
 # =============================================================================
