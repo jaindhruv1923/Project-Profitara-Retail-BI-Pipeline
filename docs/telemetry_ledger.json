@@ -1,5 +1,13 @@
 [
   {
+    "timestamp": "2026-11-24T14:03:28Z",
+    "date": "2026-11-24",
+    "clv_r2": 0.93,
+    "churn_auc": 0.91,
+    "latency_ms": 0.905,
+    "digest": "ca4321cd8e73cacd"
+  },
+  {
     "timestamp": "2026-11-23T13:23:40Z",
     "date": "2026-11-23",
     "clv_r2": 0.93,
